@@ -12,6 +12,7 @@
     ./hyprlock.nix
     ./hyprshade.nix
     ./packages.nix
+    ./style.nix
     ./swaync.nix
     ./swayosd.nix
     ./terminal.nix

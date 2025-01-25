@@ -124,6 +124,18 @@
   };
   xdg.configFile."bat/config".source = ../../config/bat/config;
 
+  programs.yazi = {
+    enable = true;
+    package = inputs.yazi.packages.${pkgs.system}.default;
+    enableZshIntegration = true;
+    plugins = {
+      full-border = "${inputs.yazi-plugins}/full-border.yazi";
+    };
+  };
+  xdg.configFile."yazi/init.lua".text = ''
+    require("full-border"):setup()
+  '';
+
   programs.tealdeer = {
     enable = true;
   };

@@ -9,8 +9,6 @@
     packages = with pkgs; [
       font-awesome
       nerd-fonts.fira-code
-      nerd-fonts.iosevka
-      nerd-fonts.noto
       nerd-fonts.symbols-only
       noto-fonts-emoji
     ];
@@ -57,7 +55,6 @@
       }
     )
     bibata-cursors # cursor theme
-    inputs.swww.packages.${pkgs.system}.swww
   ];
 
   imports = [inputs.stylix.nixosModules.stylix];
@@ -74,7 +71,7 @@
       };
       serif = {
         name = "FiraCode Nerd Font";
-        package = pkgs.nerd-fonts-fira-code;
+        package = pkgs.nerd-fonts.fira-code;
       };
       sansSerif = {
         name = "FiraCode Nerd Font";
@@ -90,14 +87,14 @@
       package = pkgs.bibabta-cursors;
       size = 24;
     };
-	opacity = {
-		desktop = 0.9;
-		terminal = 0.8;
-	};
-	targets = {
-		gnome.enable = true;
-		gtk.enable = true;
-		nixos-icons.enable = true;
-	};
+    opacity = {
+      desktop = 0.9;
+      terminal = 0.8;
+    };
+    targets = {
+      gnome.enable = true;
+      gtk.enable = true;
+      nixos-icons.enable = true;
+    };
   };
 }
