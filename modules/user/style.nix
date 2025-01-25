@@ -30,7 +30,7 @@
     };
     cursor = {
       name = "Bibata-Modern-Ice";
-      package = pkgs.bibabta-cursors;
+      package = pkgs.bibata-cursors;
       size = 24;
     };
     opacity = {
