@@ -1,5 +1,5 @@
-{ ... }: {
-	imports = [
-		../modules/user
-	];
+{...}: {
+  imports = [
+    ../modules/user
+  ];
 }
