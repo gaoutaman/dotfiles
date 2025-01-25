@@ -2,5 +2,5 @@
   programs.hyprlock = {
     enable = true;
   };
-  xdg.configFile."hypr/hyprlock.conf".source = ../../confg/hypr/hyprlock.conf;
+  xdg.configFile."hypr/hyprlock.conf".source = ../../config/hypr/hyprlock.conf;
 }
