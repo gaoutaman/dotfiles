@@ -79,15 +79,13 @@
     package = inputs.wezterm.packages.${pkgs.system}.default;
     enableZshIntegration = true;
   };
+  xdg.configFile."wezterm/wezterm.lua".source = ../../config/wezterm/wezterm.lua;
 
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
-    settings = {
-      add_newline = false;
-      scan_timeout = 10;
-    };
   };
+  xdg.configFile."starship.toml".source = ../../config/starship.toml;
 
   programs.eza = {
     enable = true;
@@ -117,9 +115,6 @@
 
   programs.bat = {
     enable = true;
-    config = {
-      pager = "less -FR";
-    };
     extraPackages = with pkgs.bat-extras; [
       batman
       batpipe
@@ -127,19 +122,12 @@
       batdiff
     ];
   };
+  xdg.configFile."bat/config".source = ../../config/bat/config;
 
   programs.tealdeer = {
     enable = true;
-    settings = {
-      display = {
-        compact = false;
-        use_pager = true;
-      };
-      updates = {
-        auto_update = true;
-      };
-    };
   };
+  xdg.configFile."tealdeer/config.toml".source = ../../config/tealdeer/config.toml;
 
   programs.direnv = {
     enable = true;

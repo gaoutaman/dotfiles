@@ -1,0 +1,147 @@
+[
+  {
+    "battery": {
+      "format": "{icon} {capacity}%",
+      "format-charging": " {capacity}%",
+      "format-full": " {capacity}%",
+      "format-icons": [
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      "format-time": "{H}h{M}m",
+      "format-warning": " {capacity}%",
+      "interval": 5,
+      "states": {
+        "warning": 20
+      },
+      "tooltip": true,
+      "tooltip-format": "{time}"
+    },
+    "clock": {
+      "calendar": {
+        "format": {
+          "today": "<span color='#98971A'><b>{}</b></span>"
+        }
+      },
+      "format": "  {:%H:%M}",
+      "format-alt": "  {:%d/%m}",
+      "tooltip": "true",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "cpu": {
+      "format": "  {usage}%",
+      "format-alt": "  {avg_frequency} GHz",
+      "interval": 2,
+      "on-click-right": "wezterm start --btop"
+    },
+    "custom/notification": {
+      "escape": true,
+      "exec": "swaync-client -swb",
+      "exec-if": "which swaync-client",
+      "format": "{icon} ",
+      "format-icons": {
+        "dnd-inhibited-none": "  <span foreground='red'></span>",
+        "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>  <span foreground='red'></span>",
+        "dnd-none": "  <span foreground='red'></span>",
+        "dnd-notification": "<span foreground='red'><sup></sup></span>  <span foreground='red'></span>",
+        "inhibited-none": "  <span foreground='red'></span>",
+        "inhibited-notification": "<span foreground='red'><sup></sup></span>  <span foreground='red'></span>",
+        "none": "  <span foreground='red'></span>",
+        "notification": "<span foreground='red'><sup></sup></span>  <span foreground='red'></span>"
+      },
+      "on-click": "swaync-client -t -sw",
+      "on-click-right": "swaync-client -d -sw",
+      "return-type": "json",
+      "tooltip": false
+    },
+    "disk": {
+      "format": "󰋊 {percentage_used}%",
+      "interval": 60,
+      "on-click-right": "wezterm start --btop"
+    },
+    "height": 28,
+    "hyprland/workspaces": {
+      "active-only": false,
+      "disable-scroll": true,
+      "format": "{icon}",
+      "format-icons": {
+        "1": "1",
+        "10": "10",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "sort-by-number": true
+      },
+      "hyprland/window": {
+        "separate-outputs": true
+      },
+      "on-click": "activate",
+      "persistent-workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": []
+      }
+    },
+    "layer": "top",
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "margin-top": 0,
+    "memory": {
+      "format": "󰟜 {}%",
+      "format-alt": "󰟜 {used} GiB",
+      "interval": 2,
+      "on-click-right": "wezterm start --btop"
+    },
+    "modules-center": [
+      "clock",
+      "hyprland/window"
+    ],
+    "modules-left": [
+      "hyprland/workspaces",
+      "tray"
+    ],
+    "modules-right": [
+      "cpu",
+      "memory",
+      "disk",
+      "pulseaudio",
+      "network",
+      "battery",
+      "custom/notification"
+    ],
+    "network": {
+      "format-disconnected": "󰖪 ",
+      "format-ethernet": "󰀂 ",
+      "format-linked": "{ifname} (No IP)",
+      "format-wifi": "  {signalStrength}%",
+      "tooltip-format": "Connected to {essid} {ifname} via {gwaddr}"
+    },
+    "position": "top",
+    "pulseaudio": {
+      "format": "{icon} {volume}%",
+      "format-icons": {
+        "default": [
+          " "
+        ]
+      },
+      "format-muted": "  {volume}%",
+      "on-click": "pavucontrol",
+      "scroll-step": 2
+    },
+    "tray": {
+      "icon-size": 20,
+      "spacing": 8
+    }
+  }
+]
