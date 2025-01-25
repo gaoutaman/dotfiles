@@ -17,6 +17,7 @@
     ./terminal.nix
     ./user.nix
     ./waybar.nix
+./wlogout.nix
     ./wofi.nix
   ];
 }
