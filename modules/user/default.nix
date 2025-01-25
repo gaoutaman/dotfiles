@@ -3,13 +3,20 @@
   pkgs,
   ...
 }: {
-  home.username = "gaoutaman";
-  home.homeDirectory = "/home/gaoutaman";
-  home.stateVersion = "24.11"; # Please read the comment before changing.
-  programs.home-manager.enable = true;
   imports = [
     ./browser.nix
+    ./files.nix
+    ./git.nix
+    ./hypridle.nix
     ./hyprland.nix
+    ./hyprlock.nix
+    ./hyprshade.nix
+    ./packages.nix
+    ./swaync.nix
+    ./swayosd.nix
     ./terminal.nix
+    ./user.nix
+    ./waybar.nix
+    ./wofi.nix
   ];
 }

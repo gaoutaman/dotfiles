@@ -29,6 +29,7 @@
     system = "x86_64-linux";
     pkgs = import inputs.nixpkgs {
       inherit system;
+      overlays = [inputs.nur.overlays.default];
       config = {
         allowUnfree = true;
         allowUnfreePredicate = _: true;
@@ -36,7 +37,7 @@
     };
     pkgs-stable = import inputs.nixpkgs-stable {
       inherit system;
-      overlays = [inputs.nur.overlay];
+      overlays = [inputs.nur.overlays.default];
       config = {
         allowUnfree = true;
         allowUnfreePredicate = _: true; # set certain packages and disable allowUnfree

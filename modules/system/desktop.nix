@@ -50,7 +50,7 @@
         flavor = "macchiato";
         font = "FiraCode Nerd Font";
         fontSize = "9";
-        # background = "${../../wallpaper.jpg}";
+        background = "${../../wallpaper.jpg}";
         loginBackground = true;
       }
     )
