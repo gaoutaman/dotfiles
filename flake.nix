@@ -23,6 +23,16 @@
       flake = false;
     };
     hyprpolkit.url = "github:hyprwm/hyprpolkitagent";
+stylix.url = "github:danth/stylix";
+swww.url = "github:LGFae/swww";
+yazi.url = "github:sxyazi/yazi";
+    yazi-plugins = {
+      url = "github:yazi-rs/plugins";
+      flake = false;
+    };
+    nixcord = {
+      url = "github:kaylorben/nixcord";
+    };
   };
 
   outputs = {self, ...} @ inputs: let

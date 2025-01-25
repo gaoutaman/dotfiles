@@ -9,6 +9,8 @@
     packages = with pkgs; [
       font-awesome
       nerd-fonts.fira-code
+      nerd-fonts.iosevka
+      nerd-fonts.noto
       nerd-fonts.symbols-only
       noto-fonts-emoji
     ];
@@ -55,5 +57,47 @@
       }
     )
     bibata-cursors # cursor theme
+    inputs.swww.packages.${pkgs.system}.swww
   ];
+
+  imports = [inputs.stylix.nixosModules.stylix];
+  stylix = {
+    enable = true;
+    autoEnable = false;
+    polarity = "dark";
+    image = ../../wallpaper.jpg;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
+    fonts = {
+      monospace = {
+        name = "FiraCode Nerd Font Mono";
+        package = pkgs.nerd-fonts.fira-code;
+      };
+      serif = {
+        name = "FiraCode Nerd Font";
+        package = pkgs.nerd-fonts-fira-code;
+      };
+      sansSerif = {
+        name = "FiraCode Nerd Font";
+        package = pkgs.nerd-fonts.fira-code;
+      };
+      emoji = {
+        name = "Noto Color Emoji";
+        package = pkgs.noto-fonts-emoji;
+      };
+    };
+    cursor = {
+      name = "Bibata-Modern-Ice";
+      package = pkgs.bibabta-cursors;
+      size = 24;
+    };
+	opacity = {
+		desktop = 0.9;
+		terminal = 0.8;
+	};
+	targets = {
+		gnome.enable = true;
+		gtk.enable = true;
+		nixos-icons.enable = true;
+	};
+  };
 }
