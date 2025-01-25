@@ -10,6 +10,7 @@
     ./hypridle.nix
     ./hyprland.nix
     ./hyprlock.nix
+    ./hyprpaper.nix
     ./hyprshade.nix
     ./packages.nix
     ./swaync.nix
