@@ -57,9 +57,6 @@
 	swaync.enable = true;
 	vim.enable = true;
 	waybar.enable = true;
-	waybar.enableCenterBackColors = true;
-	waybar.enableLeftBackColors = true;
-	waybar.enableRightBackColors = true;
 	wezterm.enable = true;
 	wofi.enable = true;
 	yazi.enable = true;
