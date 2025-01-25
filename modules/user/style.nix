@@ -17,7 +17,7 @@
       };
       serif = {
         name = "FiraCode Nerd Font";
-        package = pkgs.nerd-fonts-fira-code;
+        package = pkgs.nerd-fonts.fira-code;
       };
       sansSerif = {
         name = "FiraCode Nerd Font";
