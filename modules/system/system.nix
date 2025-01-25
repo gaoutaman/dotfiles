@@ -10,6 +10,7 @@
       powerOnBoot = true;
     };
   };
+
   documentation = {
     enable = true;
     doc.enable = false;
@@ -18,6 +19,7 @@
     info.enable = false;
     nixos.enable = false;
   };
+
   security = {
     rtkit.enable = true;
     sudo.enable = true;
@@ -38,6 +40,7 @@
     pavucontrol # Sound Control
     inputs.hyprpolkit.packages.${system}.default
   ];
+
   programs = {
     htop.enable = true;
     nix-ld = {
@@ -52,6 +55,7 @@
     };
     thunar.enable = true;
   };
+
   services = {
     printing.enable = true; # CUPS printing
     # Network devices
