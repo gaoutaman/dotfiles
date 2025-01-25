@@ -1,0 +1,9 @@
+[init]
+	defaultBranch = "main"
+
+[merge]
+	conflictstyle = "diff3"
+
+[user]
+	email = "g.man.9931@gmail.com"
+	name = "Gaoutaman Shanmugam"

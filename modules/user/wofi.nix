@@ -1,10 +1,6 @@
 {...}: {
   programs.wofi = {
     enable = true;
-    settings = {
-      allow_images = true;
-      prompt = "Launch App...";
-      insenstive = true;
-    };
   };
+  xdg.configFile."wofi/config".source = ../../config/wofi/config;
 }
