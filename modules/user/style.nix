@@ -6,7 +6,7 @@
   imports = [inputs.stylix.homeManagerModules.stylix];
   stylix = {
     enable = true;
-    autoEnable = false;
+    autoEnable = true;
     polarity = "dark";
     image = ../../wallpaper.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
@@ -43,24 +43,6 @@
       dark = "Papirus-Dark";
     };
     targets = {
-	bat.enable = true;
-	btop.enable = true;
-	firefox.enable = true;
-	firefox.profileNames = [ "gaoutaman" ];
-	fzf.enable = true;
-	gnome.enable = true;
-	gtk.enable = true;
-	gtk.flatpakSupport.enable = true;
-	hyprland.enable = true;
-	hyprlock.enable = true;
-	nixcord.enable = true;
-	swaync.enable = true;
-	vim.enable = true;
-	waybar.enable = true;
-	wezterm.enable = true;
-	wofi.enable = true;
-	yazi.enable = true;
-	zathura.enable = true;
     };
   };
 }

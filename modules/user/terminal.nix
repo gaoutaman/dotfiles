@@ -132,7 +132,7 @@
       full-border = "${inputs.yazi-plugins}/full-border.yazi";
     };
   };
-  xdg.configFile."yazi/init.lua".text = ''
+  xdg.configFile."yazi/main.lua".text = ''
     require("full-border"):setup()
   '';
 

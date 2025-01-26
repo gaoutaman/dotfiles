@@ -16,7 +16,5 @@
         XDG_DOTFILES_DIR = "${config.home.homeDirectory}/.dotfiles";
       };
     };
-    mime.enable = true;
-    mimeApps.enable = true;
   };
 }

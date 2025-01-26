@@ -29,6 +29,7 @@
     };
     nixPath = ["nixpkgs=${inputs.nixpkgs}"];
   };
+
   programs.nh = {
     enable = true;
     clean = {

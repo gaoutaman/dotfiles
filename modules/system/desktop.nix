@@ -60,7 +60,7 @@
   imports = [inputs.stylix.nixosModules.stylix];
   stylix = {
     enable = true;
-    autoEnable = false;
+    autoEnable = true;
     polarity = "dark";
     image = ../../wallpaper.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
@@ -92,9 +92,7 @@
       terminal = 0.8;
     };
     targets = {
-      gnome.enable = true;
-      gtk.enable = true;
-      nixos-icons.enable = true;
+	plymouth.enable = false;
     };
   };
 }
