@@ -79,7 +79,7 @@
     package = inputs.wezterm.packages.${pkgs.system}.default;
     enableZshIntegration = true;
   };
-  # xdg.configFile."wezterm/wezterm.lua".source = ../../config/wezterm/wezterm.lua;
+  xdg.configFile."wezterm/wezterm.lua".source = ../../config/wezterm/wezterm.lua;
 
   programs.starship = {
     enable = true;
@@ -122,7 +122,7 @@
       batdiff
     ];
   };
-  # xdg.configFile."bat/config".source = ../../config/bat/config;
+  xdg.configFile."bat/config".source = ../../config/bat/config;
 
   programs.yazi = {
     enable = true;

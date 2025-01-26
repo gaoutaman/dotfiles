@@ -43,6 +43,7 @@
       dark = "Papirus-Dark";
     };
     targets = {
+      hyprlock.enable = false;
     };
   };
 }
