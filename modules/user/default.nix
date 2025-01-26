@@ -5,7 +5,7 @@
 }: {
   imports = [
     ./browser.nix
-./discord.nix
+    ./discord.nix
     ./files.nix
     ./git.nix
     ./hypridle.nix

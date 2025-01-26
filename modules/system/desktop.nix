@@ -92,7 +92,7 @@
       terminal = 0.8;
     };
     targets = {
-	plymouth.enable = false;
+      plymouth.enable = false;
     };
   };
 }
