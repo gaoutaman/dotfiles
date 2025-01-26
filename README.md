@@ -23,3 +23,15 @@ NixOS/Hyprland
     ];
 - rofi
 
+### things to learn how to use
+fd
+fzf
+yazi
+bat
+vim motions
+git
+ripgrep
+wl-clipboard/cliphist
+wezterm
+direnv
+neovim
