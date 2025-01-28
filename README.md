@@ -1,17 +1,10 @@
 # dotfiles
 NixOS/Hyprland
-
-### neovim
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
 ### things to setup as needed
 - postgres
 - docker/docker-compose/lazydocker/podman
-- mimeApps
 - lazygit/delta
+- mimeApps
 - fzf settings
     defaultCommand = "fd --hidden --strip-cwd-prefix --exclude .git";
     fileWidgetOptions = [
@@ -24,14 +17,13 @@ NixOS/Hyprland
 - rofi
 
 ### things to learn how to use
+git
+wezterm
+bat
 fd
 fzf
 yazi
-bat
-vim motions
-git
 ripgrep
-wl-clipboard/cliphist
-wezterm
 direnv
 neovim
+wl-clipboard/cliphist
