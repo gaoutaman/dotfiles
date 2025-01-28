@@ -44,6 +44,10 @@
     };
     targets = {
       hyprlock.enable = false;
+      neovim = {
+        transparentBackground.main = true;
+        transparentBackground.signColumn = true;
+      };
     };
   };
 }
