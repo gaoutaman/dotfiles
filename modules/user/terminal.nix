@@ -23,16 +23,24 @@
       export PATH="/home/gaoutaman/.local/share/../bin:$PATH"
     '';
     shellAliases = {
+      c = "clear";
+      cat = "bat";
+
       ".." = "cd ..";
       "..." = "cd ../..";
+      ".3" = "cd ../../..";
+      ".4" = "cd ../../../..";
+      ".5" = "cd ../../../../..";
       "--" = "cd -";
+      mkdir = "mkdir -p"
+
       find = "fd";
-      cat = "bat";
       f = "fd"; # Quick file search.
       fr = "fd -e"; # Find files with specific extensions (e.g., `fr py`).
       fo = "fzf"; # Fuzzy finder standalone.
       fof = "fd | fzf"; # Fuzzy find files using fd.
       fod = "fd -t d | fzf"; # Fuzzy find directories.
+
       ga = "git add";
       gaa = "git add . -A";
       gc = "git commit";
