@@ -32,7 +32,7 @@
       ".4" = "cd ../../../..";
       ".5" = "cd ../../../../..";
       "--" = "cd -";
-      mkdir = "mkdir -p"
+      mkdir = "mkdir -p";
 
       find = "fd";
       f = "fd"; # Quick file search.
