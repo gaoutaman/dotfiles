@@ -12,6 +12,7 @@
     ./hyprland.nix
     ./hyprlock.nix
     ./hyprshade.nix
+    ./nvim.nix
     ./packages.nix
     ./style.nix
     ./swaync.nix
