@@ -15,11 +15,9 @@
     ./packages.nix
     ./style.nix
     ./swaync.nix
-    ./swayosd.nix
     ./terminal.nix
     ./user.nix
     ./waybar.nix
-    ./wlogout.nix
     ./wofi.nix
   ];
 }
