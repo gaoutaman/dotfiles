@@ -1,6 +1,6 @@
 require('config.options')
 require('config.keymaps')
-require('plugins.lazy')
+require('config.lazy')
 require('plugins.keymaps')
 require('plugins.options')
 
