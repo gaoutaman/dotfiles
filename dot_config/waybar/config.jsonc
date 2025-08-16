@@ -88,7 +88,7 @@
     "format-icons": ["", "", "", "", ""],
     "format-full": " {capacity}%",
     "format-charging": " {capacity}%"
-  },
+  },
   // --- Tray ---
   "tray": {
     "icon-size": 18,
