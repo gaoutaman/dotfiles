@@ -1,0 +1,64 @@
+/* General bar styling */
+* {
+  font-family: "JetBrains Mono", "FiraCode Nerd Font", monospace;
+  font-size: 13px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(30, 30, 30, 0.85);
+  border-bottom: 1px solid #444;
+  color: #eee;
+}
+
+/* Workspaces */
+#workspaces button {
+  padding: 0 8px;
+  margin: 2px;
+  border-radius: 6px;
+  background: transparent;
+  color: #ccc;
+  transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+  background: #4c7899;
+  color: #fff;
+}
+
+#workspaces button:hover {
+  background: #555;
+  color: #fff;
+}
+
+/* Modules */
+#clock,
+#pulseaudio,
+#network,
+#cpu,
+#temperature,
+#disk,
+#backlight,
+#battery {
+  padding: 0 10px;
+  margin: 0 2px;
+  border-radius: 6px;
+  background: rgba(60, 60, 60, 0.6);
+}
+
+/* Battery colors */
+#battery.warning {
+  color: #ffb52a;
+}
+#battery.critical {
+  color: #ff5555;
+}
+#battery.charging {
+  color: #50fa7b;
+}
+
+/* Temperature warning */
+#temperature.critical {
+  color: #ff5555;
+}
+
