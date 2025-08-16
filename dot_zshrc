@@ -1,0 +1,84 @@
+export PATH="$HOME/.scripts:$PATH"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export LESSHISTFILE="$XDG_CACHE_HOME/less_history"
+export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0" # gtk 3 & 4 are XDG compliant
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export GOPATH="$XDG_DATA_HOME/go"
+export GOBIN="$GOPATH/bin"
+export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export DATE=$(date "+%A, %B %e  %_I:%M%P")
+export FZF_DEFAULT_OPTS="--style minimal --color 16 --layout=reverse --height 30% --preview='bat -p --color=always {}'"
+export FZF_CTRL_R_OPTS="--style minimal --color 16 --info inline --no-sort --no-preview" # separate opts for history widget
+export MANPAGER="less -R --use-color -Dd+r -Du+b" # colored man pages
+export EDITOR=nvim
+# colored less + termcap vars
+export LESS="R --use-color -Dd+r -Du+b"
+export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"
+export LESS_TERMCAP_md="$(printf '%b' '[1;36m')"
+export LESS_TERMCAP_me="$(printf '%b' '[0m')"
+export LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"
+export LESS_TERMCAP_se="$(printf '%b' '[0m')"
+export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
+export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
+
+# Options
+setopt append_history inc_append_history share_history # better history
+setopt auto_menu menu_complete
+setopt auto_param_slash # when a dir is completed, add a / instead of a trailing space
+setopt no_case_glob no_case_match # make cmp case insensitive
+setopt globdots # include dotfiles
+setopt extendedglob
+setopt nomatch
+unsetopt prompt_sp
+unsetopt autocd notify
+stty stop undef # disable accidental ctrl s
+
+zmodload zsh/complist
+autoload -Uz compinit && compinit
+autoload -U colors && colors
+
+zstyle :compinstall filename '/home/gaoutaman/.zshrc'
+zstyle ':completion:*' menu select # tab opens cmp menu
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} ma=0\;33 # colorize cmp menu
+zstyle ':completion:*' squeeze-slashes false # explicit disable to allow /*/ expansion
+
+# history opts
+HISTSIZE=1000000
+SAVEHIST=1000000
+HISTFILE="$XDG_CACHE_HOME/zsh_history" # move histfile to cache
+HISTCONTROL=ignoreboth # consecutive duplicates & commands starting with space are not saved
+
+bindkey -v
+
+# Alias
+alias c="clear"
+alias v="nvim"
+alias cat="bat"
+alias ls="ls -h --color=auto --group-directories-first"
+alias l="ls -lh --color=auto --group-directories-first"
+alias la="ls -lah --color=auto --group-directories-first"
+alias rm="rm -Iv"
+alias mv="mv -i"
+alias diff="diff --color=auto"
+alias grep="grep --color=auto"
+alias ip="ip -color=auto"
+alias cm="chezmoi"
+
+# yazi shell wrapper
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp" > /dev/null 2>&1
+}
+# Eval
+eval "$(zoxide init zsh --cmd cd)"
+eval "$(atuin init zsh)"
+eval "$(starship init zsh)"
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
