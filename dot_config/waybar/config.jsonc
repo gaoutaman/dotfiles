@@ -44,7 +44,10 @@
       "car": "",
       "default": ["", ""]
     },
-    "scroll-step": 2
+    "scroll-step": 2,
+    "on-click": "flatpak run com.saviert.pwvucontrol",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2%"
   },
 
   // --- Network ---
@@ -84,6 +87,12 @@
     "format-icons": ["", "", "", "", ""],
     "format-full": " {capacity}%",
     "format-charging": " {capacity}%"
+  },
+
+  // --- Tray ---
+  "tray": {
+    "icon-size": 18,
+    "spacing": 8
   }
 }
 
