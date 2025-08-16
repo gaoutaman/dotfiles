@@ -79,6 +79,7 @@ function y() {
 eval "$(zoxide init zsh --cmd cd)"
 eval "$(atuin init zsh)"
 eval "$(starship init zsh)"
+eval "$(ssh-agent -s)" >/dev/null
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
