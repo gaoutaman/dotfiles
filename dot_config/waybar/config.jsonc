@@ -88,8 +88,7 @@
     "format-icons": ["", "", "", "", ""],
     "format-full": " {capacity}%",
     "format-charging": " {capacity}%"
-  },
-
+  },
   // --- Tray ---
   "tray": {
     "icon-size": 18,
@@ -114,22 +113,22 @@
   "custom/power": {
     "format": "",
     "tooltip": false,
-    "on-click": "shutdown now"
+    "on-click": "power-menu shutdown"
   },
   "custom/quit": {
     "format": "󰗼",
     "tooltip": false,
-    "on-click": "hyprctl dispatch exit"
+    "on-click": "power-menu logout"
   },
   "custom/lock": {
     "format": "󰍁",
     "tooltip": false,
-    "on-click": "hyprlock"
+    "on-click": "power-menu lock"
   },
   "custom/reboot": {
     "format": "󰜉",
     "tooltip": false,
-    "on-click": "systemctl reboot"
+    "on-click": "power-menu reboot"
   }
 
 }
