@@ -62,3 +62,50 @@ window#waybar {
   color: #ff5555;
 }
 
+/* === Tray === */
+#tray {
+  padding: 0 8px;
+  background: rgba(40, 40, 40, 0.7); /* subtle transparent background */
+  border-radius: 8px;
+  margin: 0 4px;
+}
+
+#tray > .tray-icon {
+  margin: 0 3px;
+  border-radius: 6px;
+  padding: 2px;
+  transition: background 0.2s ease-in-out;
+}
+
+#tray > .tray-icon:hover {
+  background: rgba(255, 255, 255, 0.1); /* soft hover effect */
+}
+
+/* === Power Group === */
+#group-power {
+  padding: 0 8px;
+  background: rgba(200, 40, 40, 0.8); /* red-ish capsule to stand out */
+  border-radius: 10px;
+  margin-left: 6px;
+  transition: background 0.2s ease-in-out;
+}
+
+#group-power:hover {
+  background: rgba(255, 60, 60, 0.9);
+}
+
+#custom-power,
+#custom-quit,
+#custom-lock,
+#custom-reboot {
+  padding: 0 6px;
+  font-size: 14px;
+  transition: color 0.2s ease-in-out;
+}
+
+#custom-quit:hover,
+#custom-lock:hover,
+#custom-reboot:hover {
+  color: #ffffff;
+}
+
