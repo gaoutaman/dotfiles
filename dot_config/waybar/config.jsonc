@@ -13,7 +13,8 @@
     "disk",
     "backlight",
     "battery",
-    "tray"
+    "tray",
+    "group/power"
   ],
 
   // --- Workspaces ---
@@ -93,6 +94,43 @@
   "tray": {
     "icon-size": 18,
     "spacing": 8
+  },
+
+  "group/power": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "not-power",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/power",   // group leader
+      "custom/quit",
+      "custom/lock",
+      "custom/reboot"
+    ]
+  },
+
+  "custom/power": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "shutdown now"
+  },
+  "custom/quit": {
+    "format": "󰗼",
+    "tooltip": false,
+    "on-click": "hyprctl dispatch exit"
+  },
+  "custom/lock": {
+    "format": "󰍁",
+    "tooltip": false,
+    "on-click": "hyprlock"
+  },
+  "custom/reboot": {
+    "format": "󰜉",
+    "tooltip": false,
+    "on-click": "systemctl reboot"
   }
+
 }
 
