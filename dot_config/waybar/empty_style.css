@@ -1,111 +1,109 @@
-/* General bar styling */
+/* === Global === */
 * {
-  font-family: "JetBrains Mono", "FiraCode Nerd Font", monospace;
-  font-size: 13px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
   min-height: 0;
 }
 
 window#waybar {
-  background: rgba(30, 30, 30, 0.85);
-  border-bottom: 1px solid #444;
-  color: #eee;
+  background: rgba(30, 30, 30, 0.7);
+  color: #e0e0e0;
+  border: none;
+  padding: 2px 6px;
 }
 
-/* Workspaces */
+/* === Workspaces === */
 #workspaces button {
-  padding: 0 8px;
+  padding: 4px 8px;
   margin: 2px;
-  border-radius: 6px;
-  background: transparent;
-  color: #ccc;
-  transition: all 0.2s ease;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #bbb;
+  transition: background 0.2s, color 0.2s;
 }
 
-#workspaces button.active {
-  background: #4c7899;
+#workspaces button.focused {
+  background: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
 
 #workspaces button:hover {
-  background: #555;
+  background: rgba(255, 255, 255, 0.15);
   color: #fff;
 }
 
-/* Modules */
-#clock,
+/* === Clock === */
+#clock {
+  padding: 0 10px;
+  font-weight: bold;
+  color: #f2f2f2;
+}
+
+/* === Modules (default look) === */
 #pulseaudio,
 #network,
 #cpu,
 #temperature,
 #disk,
 #backlight,
-#battery {
-  padding: 0 10px;
-  margin: 0 2px;
-  border-radius: 6px;
-  background: rgba(60, 60, 60, 0.6);
-}
-
-/* Battery colors */
-#battery.warning {
-  color: #ffb52a;
-}
-#battery.critical {
-  color: #ff5555;
-}
-#battery.charging {
-  color: #50fa7b;
-}
-
-/* Temperature warning */
-#temperature.critical {
-  color: #ff5555;
-}
-
-/* === Tray === */
-#tray {
-  padding: 0 8px;
-  background: rgba(40, 40, 40, 0.7); /* subtle transparent background */
-  border-radius: 8px;
-  margin: 0 4px;
-}
-
-#tray > .tray-icon {
-  margin: 0 3px;
-  border-radius: 6px;
-  padding: 2px;
-  transition: background 0.2s ease-in-out;
-}
-
-#tray > .tray-icon:hover {
-  background: rgba(255, 255, 255, 0.1); /* soft hover effect */
-}
-
-/* === Power Group === */
-#group-power {
-  padding: 0 8px;
-  background: rgba(200, 40, 40, 0.8); /* red-ish capsule to stand out */
-  border-radius: 10px;
-  margin-left: 6px;
-  transition: background 0.2s ease-in-out;
-}
-
-#group-power:hover {
-  background: rgba(255, 60, 60, 0.9);
-}
-
+#battery,
+#tray,
 #custom-power,
 #custom-quit,
 #custom-lock,
 #custom-reboot {
-  padding: 0 6px;
-  font-size: 14px;
-  transition: color 0.2s ease-in-out;
+  padding: 4px 8px;
+  margin: 2px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: background 0.2s;
 }
 
+#pulseaudio:hover,
+#network:hover,
+#cpu:hover,
+#temperature:hover,
+#disk:hover,
+#backlight:hover,
+#battery:hover,
+#tray:hover,
+#custom-power:hover,
 #custom-quit:hover,
 #custom-lock:hover,
 #custom-reboot:hover {
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* === Power Group === */
+#custom-power {
+  background: rgba(200, 50, 50, 0.2);
+  color: #ff5555;
+  font-weight: bold;
+}
+
+#custom-power:hover {
+  background: rgba(200, 50, 50, 0.3);
+}
+
+#custom-quit {
+  color: #ffaa00;
+}
+
+#custom-lock {
+  color: #00ccff;
+}
+
+#custom-reboot {
+  color: #66ff66;
+}
+
+/* === Battery === */
+#battery.warning {
+  color: #ffaa00;
+}
+
+#battery.critical {
+  color: #ff4444;
+  font-weight: bold;
 }
 
