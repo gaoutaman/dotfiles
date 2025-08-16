@@ -46,7 +46,7 @@
       "default": ["", ""]
     },
     "scroll-step": 2,
-    "on-click": "flatpak run com.saviert.pwvucontrol",
+    "on-click": "flatpak run com.saivert.pwvucontrol",
     "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2%",
     "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2%"
   },
@@ -89,12 +89,14 @@
     "format-full": " {capacity}%",
     "format-charging": " {capacity}%"
   },
+
   // --- Tray ---
   "tray": {
     "icon-size": 18,
     "spacing": 8
   },
 
+  // --- Power Group ---
   "group/power": {
     "orientation": "inherit",
     "drawer": {
@@ -103,7 +105,7 @@
       "transition-left-to-right": false
     },
     "modules": [
-      "custom/power",   // group leader
+      "custom/power",
       "custom/quit",
       "custom/lock",
       "custom/reboot"
@@ -130,6 +132,5 @@
     "tooltip": false,
     "on-click": "power-menu reboot"
   }
-
 }
 
