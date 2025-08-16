@@ -1,0 +1,7 @@
+[user]
+	name = gaoutaman
+	email = g.man.9931@gmail.com
+[core]
+	editor = vim --nofork
+[init]
+	defaultBranch = main
