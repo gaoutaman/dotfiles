@@ -23,6 +23,8 @@ export LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"
 export LESS_TERMCAP_se="$(printf '%b' '[0m')"
 export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
 export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
+export BAT_THEME='TwoDark'
+export BAT_PAGER='less'
 
 # Options
 setopt append_history inc_append_history share_history # better history
@@ -56,7 +58,8 @@ bindkey -v
 # Alias
 alias c="clear"
 alias v="nvim"
-alias cat="bat"
+alias cat="bat --paging=never"
+alias bat='bat --style=plain --paging=always'
 alias ls="ls -h --color=auto --group-directories-first"
 alias l="ls -lh --color=auto --group-directories-first"
 alias la="ls -lah --color=auto --group-directories-first"
@@ -80,6 +83,7 @@ eval "$(zoxide init zsh --cmd cd)"
 eval "$(atuin init zsh)"
 eval "$(starship init zsh)"
 eval "$(ssh-agent -s)" >/dev/null
+eval "$(direnv hook zsh)"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
