@@ -107,3 +107,6 @@ window#waybar {
   font-weight: bold;
 }
 
+#custom-notification {
+  font-family: "JetBrainsMono Nerd Font";
+}
