@@ -71,6 +71,8 @@ alias diff="diff --color=auto"
 alias grep="grep --color=auto"
 alias ip="ip -color=auto"
 alias cm="chezmoi"
+alias rg='rg --color=always'
+alias rga='rga --color=always'
 
 # yazi shell wrapper
 function y() {
