@@ -42,8 +42,8 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-#font-family = JetBrainsMonoNL NFM Regular
-#font-family-bold = JetBrainsMonoNL NFM Bold
-# font-family-italic = JetBrainsMonoNL NFM Italic
-# font-family-bold-italic = JetBrainsMonoNL NFM Bold Italic
-# theme = Catppuccin Mocha
+font-family = JetBrainsMonoNL NFM Regular
+font-family-bold = JetBrainsMonoNL NFM Bold
+font-family-italic = JetBrainsMonoNL NFM Italic
+font-family-bold-italic = JetBrainsMonoNL NFM Bold Italic
+theme = Catppuccin Frappe
